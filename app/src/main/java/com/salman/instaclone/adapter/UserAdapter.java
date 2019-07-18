@@ -1,4 +1,4 @@
-package adapter;
+package com.salman.instaclone.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -27,8 +27,8 @@ import java.util.HashMap;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import fragment.ProfileFragment;
-import model.User;
+import com.salman.instaclone.fragment.ProfileFragment;
+import com.salman.instaclone.model.User;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.myViewHolder> {
     Context mContext;

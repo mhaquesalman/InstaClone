@@ -13,10 +13,10 @@ import android.view.MenuItem;
 import com.google.firebase.auth.FirebaseAuth;
 import com.salman.instaclone.R;
 
-import fragment.HomeFragment;
-import fragment.NotificationFragment;
-import fragment.ProfileFragment;
-import fragment.SearchFragment;
+import com.salman.instaclone.fragment.HomeFragment;
+import com.salman.instaclone.fragment.NotificationFragment;
+import com.salman.instaclone.fragment.ProfileFragment;
+import com.salman.instaclone.fragment.SearchFragment;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;

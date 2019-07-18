@@ -1,4 +1,4 @@
-package adapter;
+package com.salman.instaclone.adapter;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -37,10 +37,10 @@ import com.salman.instaclone.activity.FollowersActivity;
 import java.util.HashMap;
 import java.util.List;
 
-import fragment.PostDetailFragment;
-import fragment.ProfileFragment;
-import model.Post;
-import model.User;
+import com.salman.instaclone.fragment.PostDetailFragment;
+import com.salman.instaclone.fragment.ProfileFragment;
+import com.salman.instaclone.model.Post;
+import com.salman.instaclone.model.User;
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.myViewHolder>{
 

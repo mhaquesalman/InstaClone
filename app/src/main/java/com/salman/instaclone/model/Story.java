@@ -1,4 +1,4 @@
-package model;
+package com.salman.instaclone.model;
 
 public class Story {
     private String imageurl;

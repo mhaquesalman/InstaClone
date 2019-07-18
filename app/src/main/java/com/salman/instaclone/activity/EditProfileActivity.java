@@ -36,7 +36,7 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 
 import java.util.HashMap;
 
-import model.User;
+import com.salman.instaclone.model.User;
 
 public class EditProfileActivity extends AppCompatActivity {
     ImageView close, image_profile;

@@ -1,4 +1,4 @@
-package fragment;
+package com.salman.instaclone.fragment;
 
 
 import android.os.Bundle;
@@ -25,8 +25,8 @@ import com.salman.instaclone.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import adapter.UserAdapter;
-import model.User;
+import com.salman.instaclone.adapter.UserAdapter;
+import com.salman.instaclone.model.User;
 
 /**
  * A simple {@link Fragment} subclass.

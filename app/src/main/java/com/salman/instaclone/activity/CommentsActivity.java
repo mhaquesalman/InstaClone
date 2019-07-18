@@ -28,9 +28,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import adapter.CommentAdapter;
-import model.Comment;
-import model.User;
+import com.salman.instaclone.adapter.CommentAdapter;
+import com.salman.instaclone.model.Comment;
+import com.salman.instaclone.model.User;
 
 public class CommentsActivity extends AppCompatActivity {
 

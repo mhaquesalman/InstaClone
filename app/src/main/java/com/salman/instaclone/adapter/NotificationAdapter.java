@@ -1,4 +1,4 @@
-package adapter;
+package com.salman.instaclone.adapter;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -22,11 +22,11 @@ import com.salman.instaclone.R;
 
 import java.util.List;
 
-import fragment.PostDetailFragment;
-import fragment.ProfileFragment;
-import model.Notification;
-import model.Post;
-import model.User;
+import com.salman.instaclone.fragment.PostDetailFragment;
+import com.salman.instaclone.fragment.ProfileFragment;
+import com.salman.instaclone.model.Notification;
+import com.salman.instaclone.model.Post;
+import com.salman.instaclone.model.User;
 
 public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapter.myViewHolder> {
     private static final String TAG = "NotificationAdapter";

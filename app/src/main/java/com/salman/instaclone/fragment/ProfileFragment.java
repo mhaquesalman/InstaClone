@@ -1,4 +1,4 @@
-package fragment;
+package com.salman.instaclone.fragment;
 
 
 import android.content.Context;
@@ -18,7 +18,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
@@ -38,9 +37,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-import adapter.MyPhotoAdapter;
-import model.Post;
-import model.User;
+import com.salman.instaclone.adapter.MyPhotoAdapter;
+import com.salman.instaclone.model.Post;
+import com.salman.instaclone.model.User;
 
 public class ProfileFragment extends Fragment {
     private static final String TAG = "ProfileFragment";

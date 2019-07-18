@@ -1,4 +1,4 @@
-package model;
+package com.salman.instaclone.model;
 
 public class User {
     private String id;

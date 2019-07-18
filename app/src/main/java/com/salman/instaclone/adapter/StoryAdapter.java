@@ -1,4 +1,4 @@
-package adapter;
+package com.salman.instaclone.adapter;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -26,8 +26,8 @@ import com.salman.instaclone.activity.StoryActivity;
 
 import java.util.List;
 
-import model.Story;
-import model.User;
+import com.salman.instaclone.model.Story;
+import com.salman.instaclone.model.User;
 
 public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.myViewHolder>{
     Context mContext;

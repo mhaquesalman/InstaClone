@@ -1,4 +1,4 @@
-package adapter;
+package com.salman.instaclone.adapter;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -29,8 +29,8 @@ import com.salman.instaclone.activity.MainActivity;
 
 import java.util.List;
 
-import model.Comment;
-import model.User;
+import com.salman.instaclone.model.Comment;
+import com.salman.instaclone.model.User;
 
 public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.myViewHolder> {
 

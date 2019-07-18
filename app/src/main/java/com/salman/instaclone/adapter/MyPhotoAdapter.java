@@ -1,4 +1,4 @@
-package adapter;
+package com.salman.instaclone.adapter;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -15,8 +15,8 @@ import com.salman.instaclone.R;
 
 import java.util.List;
 
-import fragment.PostDetailFragment;
-import model.Post;
+import com.salman.instaclone.fragment.PostDetailFragment;
+import com.salman.instaclone.model.Post;
 
 public class MyPhotoAdapter extends RecyclerView.Adapter<MyPhotoAdapter.myViewHolder>{
     Context mContex;

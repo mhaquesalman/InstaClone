@@ -1,5 +1,7 @@
-package fragment;
+package com.salman.instaclone.fragment;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -9,8 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -19,52 +19,50 @@ import com.google.firebase.database.ValueEventListener;
 import com.salman.instaclone.R;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-import adapter.NotificationAdapter;
-import model.Notification;
+import com.salman.instaclone.adapter.PostAdapter;
+import com.salman.instaclone.model.Post;
 
-public class NotificationFragment extends Fragment {
+public class PostDetailFragment extends Fragment {
 
+    String postid;
     RecyclerView recyclerView;
-    NotificationAdapter notificationAdapter;
-    List<Notification> notificationList;
-
+    PostAdapter postAdapter;
+    List<Post> postList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_notification, container, false);
+        View view = inflater.inflate(R.layout.fragment_post_detail, container, false);
+
+        SharedPreferences preferences = getContext().getSharedPreferences("PREFS", Context.MODE_PRIVATE);
+        postid = preferences.getString("postid", "none");
 
         recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
-        notificationList = new ArrayList<>();
-        notificationAdapter = new NotificationAdapter(getContext(), notificationList);
-        recyclerView.setAdapter(notificationAdapter);
 
-        readNotification();
+        postList = new ArrayList<>();
+        postAdapter = new PostAdapter(getContext(), postList);
+        recyclerView.setAdapter(postAdapter);
 
+        readPost();
         return view;
+
     }
 
-    public void readNotification() {
-        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Notification")
-                .child(firebaseUser.getUid());
+    private void readPost() {
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Posts").child(postid);
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                notificationList.clear();
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                    Notification notification = dataSnapshot.getValue(Notification.class);
-                    notificationList.add(notification);
-                }
-                Collections.reverse(notificationList);
-                notificationAdapter.notifyDataSetChanged();
-            }
+                postList.clear();
+                Post post = dataSnapshot.getValue(Post.class);
+                postList.add(post);
 
+                postAdapter.notifyDataSetChanged();
+            }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 

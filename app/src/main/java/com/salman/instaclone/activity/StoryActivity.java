@@ -26,8 +26,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jp.shts.android.storiesprogressview.StoriesProgressView;
-import model.Story;
-import model.User;
+import com.salman.instaclone.model.Story;
+import com.salman.instaclone.model.User;
 
 public class StoryActivity extends AppCompatActivity implements StoriesProgressView.StoriesListener {
 

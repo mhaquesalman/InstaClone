@@ -1,4 +1,4 @@
-package fragment;
+package com.salman.instaclone.fragment;
 
 
 import android.os.Bundle;
@@ -24,10 +24,10 @@ import com.salman.instaclone.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import adapter.PostAdapter;
-import adapter.StoryAdapter;
-import model.Post;
-import model.Story;
+import com.salman.instaclone.adapter.PostAdapter;
+import com.salman.instaclone.adapter.StoryAdapter;
+import com.salman.instaclone.model.Post;
+import com.salman.instaclone.model.Story;
 
 public class HomeFragment extends Fragment {
     private static final String TAG = "HomeFragment";
